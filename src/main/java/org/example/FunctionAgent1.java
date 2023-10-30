@@ -7,7 +7,5 @@ public class FunctionAgent1 extends Agent {
     protected void setup() {
         addBehaviour(new InitiateDistributedCalculation1());
         addBehaviour(new CalcMyFunction());
-        addBehaviour(new CalcMyFunction2());
-        addBehaviour(new CalcMyFunction3());
     }
 }
