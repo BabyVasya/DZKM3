@@ -46,14 +46,14 @@ public class CalcMyFunction extends Behaviour {
                     y32 = Math.cos(x-d);
                     y33 = Math.cos(x+d);
 
-                    if(myAgent.getLocalName().equals("Agent1")) {
+            if(myAgent.getLocalName().equals("Agent1")) {
                         ACLMessage answerAg1 = new ACLMessage(ACLMessage.CONFIRM);
                         answerAg1.addReceiver(new AID("Agent1", false));
-                        answerAg1.setContent(String.valueOf(y11) + " " + String.valueOf(y12) + " " + String.valueOf(y13));
+                        answerAg1.setContent(y11 + " " + y12 + " " + y13);
                         getAgent().send(answerAg1);
                         System.out.println("Отправка результата 1 функции: " + answerAg1);
                         System.out.println("результат расчетов 1 функции: " + "y1(x) = " + y11 + "y1(x+d) = " +y12 + "y1(x-d) = " + y13);
-                    }
+            }
 
             if(myAgent.getLocalName().equals("Agent2")) {
                 ACLMessage answerAg2 = new ACLMessage(ACLMessage.CONFIRM);
